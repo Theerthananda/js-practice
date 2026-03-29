@@ -58,8 +58,9 @@ console.log("Count down is finished!"); //Count down is finished!
 CountDown();
 console.log("Count down is finished!"); //Count down is finished!   */
 
-
- /* let count = 0; 
+ let saveElement = document.getElementById("save-ele");
+ let peopleCountElement = document.getElementById("peopleCount");
+ let count = 0; 
 
 
 function incrementCount(){
@@ -67,24 +68,26 @@ function incrementCount(){
     count = count + 1;
 
     console.log("Count is: " + count); //Count is: 1
-    document.getElementById("peopleCount").innerText = count; //Count is: 1
+    peopleCountElement.innerText = count; //Count is: 1
 }
 
 function decrementCount(){
     if(count > 0){
     count--;
+    peopleCountElement.innerText = count;
     console.log("Count is: " + count);
-    document.getElementById("peopleCount").innerText = count; //Count is: 0
+    
     }
 }
 
 
 function save(){
-    console.log(count); //Count is saved!
+    let countStr = count + " - ";
+    saveElement.innerText += countStr; //Previous Count: 0 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 -
 }
 
 save(); //Count is saved!
-*/
+
 
 /*
 
@@ -125,9 +128,12 @@ function incrementCount(){
      */ 
 
 
-
+/*wellcomeElement = document.getElementById("wellcome");
         let userName = "Theerthananda";
         let greeting = "Welcome, " + userName + "!";
         console.log(greeting); //Welcome, Theerthananda!
 
-        document.getElementById("wellcome").innerText = greeting; //Welcome, Theerthananda!
+       wellcomeElement.innerText = greeting; //Welcome, Theerthananda!
+
+       wellcomeElement.innerText=wellcomeElement.innerText + " 💀"; 
+    wellcomeElement.innerText += " 💀"; //Welcome, Theerthananda! 💀 . both are same both addes the cuurent line with new string */
