@@ -1,4 +1,4 @@
-/*//its my first js file and today means friday march 27,2026 i started core javascript and i am very excited to learn it and i will try my best to learn it and i will also try to make some projects in javascript and i will also try to learn some frameworks in javascript like react and angular and vue and node js and express js and mongodb and mysql and postgresql and redis and docker and kubernetes and aws and azure and google cloud platform and many more technologies that are related to javascript and web development.
+/*its my first js file and today means friday march 27,2026 i started core javascript and i am very excited to learn it and i will try my best to learn it and i will also try to make some projects in javascript and i will also try to learn some frameworks in javascript like react and angular and vue and node js and express js and mongodb and mysql and postgresql and redis and docker and kubernetes and aws and azure and google cloud platform and many more technologies that are related to javascript and web development.
 
 //i will also try to learn some programming languages like python and java and c++ and c# and ruby and php and go and rust and many more programming languages that are related to web development and software development.
 
@@ -59,7 +59,7 @@ CountDown();
 console.log("Count down is finished!"); //Count down is finished!   */
 
 
-  let count = 0; 
+ /* let count = 0; 
 
 
 function incrementCount(){
@@ -71,9 +71,63 @@ function incrementCount(){
 }
 
 function decrementCount(){
-    if(count >= 0){
+    if(count > 0){
     count--;
     console.log("Count is: " + count);
     document.getElementById("peopleCount").innerText = count; //Count is: 0
     }
 }
+
+
+function save(){
+    console.log(count); //Count is saved!
+}
+
+save(); //Count is saved!
+*/
+
+/*
+
+innerText is a property of an HTML element that represents the text content of the element. It can be used to get or set the text content of an element. When you set the innerText property, it will replace the existing text content of the element with the new text that you provide. When you get the innerText property, it will return the current text content of the element.
+ 
+
+DOM in javaScript is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+types of DOM manipulation:
+1. Changing the content of an element   
+2. Changing the style of an element
+3. Adding or removing elements
+function incrementCount(){
+    count++;
+    console.log("Count is: " + count);
+    document.getElementById("peopleCount").innerText = count; //Count is: 1
+      Types:
+      1. Document.getElementById() - Selects an element by its ID.
+      2. Document.getElementsByClassName() - Selects elements by their class name.
+      3. Document.getElementsByTagName() - Selects elements by their tag name.
+      4. Document.querySelector() - Selects the first element that matches a CSS selector.
+      5. Document.querySelectorAll() - Selects all elements that match a CSS selector.    */
+
+/*let userName = "Alice";    //in this program we are using string concatenation to combine two strings and to create a new string that is more meaningful and also to make the code more readable and understandable. and also to make the code more consistent and standardized. and also to make the code more professional and industry standard. and shows diffrece between numbers and strings in javascript. and also to show how javascript handles the addition operator when used with strings and numbers. and also to show how javascript converts numbers to strings when used with the addition operator and strings. and also to show how javascript concatenates strings when used with the addition operator and strings. and also to show how javascript adds numbers when used with the addition operator and numbers. and also to show how javascript handles the addition operator when used with different data types. and also to show how javascript handles type coercion when used with the addition operator and different data types. and also to show how javascript handles type conversion when used with the addition operator and different data types. and also to show how javascript handles type inference when used with the addition operator and different data types. and also to show how javascript handles type checking when used with the addition operator and different data types. and also to show how javascript handles type safety when used with the addition operator and different data types. and also to show how javascript handles type errors when used with the addition operator and different data types.    
+      let Message = "You have 3 notifications";
+      let MessageToUser = Message + " " + userName;
+      console.log(MessageToUser); //You have 3 notifications Alice
+      
+
+      let name = "TN";
+        let greeting = "Hello, " + name + "!";    
+        console.log(greeting); //Hello, TN!
+
+        console.log(4+5); //The result of 4 + 5 is: 9
+        console.log("5"+6);
+        console.log("10"+"10");
+        console.log(100+"100");
+
+     */ 
+
+
+
+        let userName = "Theerthananda";
+        let greeting = "Welcome, " + userName + "!";
+        console.log(greeting); //Welcome, Theerthananda!
+
+        document.getElementById("wellcome").innerText = greeting; //Welcome, Theerthananda!
