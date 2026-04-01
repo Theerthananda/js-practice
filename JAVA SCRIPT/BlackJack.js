@@ -1,0 +1,29 @@
+let firstcard = Math.floor(Math.random() * 11) + 1
+let secondcard = Math.floor(Math.random() * 11) + 1
+let sum = firstcard + secondcard
+
+console.log("First Card: " + firstcard)
+console.log("Second Card: " + secondcard)
+console.log("Sum: " + sum)
+
+if (sum < 21) {
+    console.log("Do you want to draw a new card?")
+} else if (sum === 21) {
+    console.log("Wohoo! You've got Blackjack!")
+} else {
+    console.log("You're out of the game!")
+}
+
+
+
+//if else demonstration
+
+let age=22-2-4
+
+if (age < 18) {
+    console.log("You cannot enter the club")
+} else if (age === 21) {
+    console.log("You can enter the club but cannot drink")
+} else {
+    console.log("You can enter the club and drink")
+}
