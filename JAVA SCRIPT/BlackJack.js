@@ -1,21 +1,30 @@
-let firstcard = Math.floor(Math.random() * 11) + 1
-let secondcard = Math.floor(Math.random() * 11) + 1
+let firstcard = 10//Math.floor(Math.random() * 11) + 1
+let secondcard = 14//Math.floor(Math.random() * 11) + 1
 let sum = firstcard + secondcard
+
+let hasBlackJack = false;
+let isAlive = true;
 
 console.log("First Card: " + firstcard)
 console.log("Second Card: " + secondcard)
 console.log("Sum: " + sum)
 
-if (sum < 21) {
+if (sum <= 20) {
     console.log("Do you want to draw a new card?")
-} else if (sum === 21) {
+} 
+else if (sum === 21) {
+    hasBlackJack = true
     console.log("Wohoo! You've got Blackjack!")
 } else {
     console.log("You're out of the game!")
+    isAlive = false
 }
 
 
+console.log(hasBlackJack)
+console.log(isAlive)
 
+/*
 //if else demonstration
 
 let age=22-2-4
@@ -37,4 +46,4 @@ if (age < 100) {
     console.log("You are a centenarian")
 } else {
     console.log("You are a supercentenarian")
-}
+}*/
