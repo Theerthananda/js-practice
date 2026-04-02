@@ -27,3 +27,14 @@ if (age < 18) {
 } else {
     console.log("You can enter the club and drink")
 }
+
+
+age=100;
+
+if (age < 100) {
+    console.log("You are not a centenarian")
+} else if (age === 100) {  //=== is used to check for both value and type equality and == is used to check for value equality only
+    console.log("You are a centenarian")
+} else {
+    console.log("You are a supercentenarian")
+}
