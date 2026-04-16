@@ -1,28 +1,34 @@
-let firstcard = 10//Math.floor(Math.random() * 11) + 1
-let secondcard = 14//Math.floor(Math.random() * 11) + 1
-let sum = firstcard + secondcard
-
+//2.14
 let hasBlackJack = false;
 let isAlive = true;
+let message = "";
 
-console.log("First Card: " + firstcard)
-console.log("Second Card: " + secondcard)
-console.log("Sum: " + sum)
+function startGame() {
+let firstcard =Math.floor(Math.random() * 15) + 1 
+let secondcard =Math.floor(Math.random() * 15) + 1
+let sum = firstcard + secondcard
+
 
 if (sum <= 20) {
-    console.log("Do you want to draw a new card?")
+    message = "Do you want to draw a new card? 🙂"
 } 
 else if (sum === 21) {
     hasBlackJack = true
-    console.log("Wohoo! You've got Blackjack!")
+    message = "Wohoo! You've got Blackjack! 😀"
 } else {
-    console.log("You're out of the game!")
+    message = "You're out of the game! 😟"
     isAlive = false
 }
 
+console.log(message)
+document.getElementById("message-el").textContent = message 
 
-console.log(hasBlackJack)
-console.log(isAlive)
+document.getElementById("sum-el").textContent = "Sum: " + sum
+document.getElementById("cards-el").textContent = "Cards:  First Card ->" + firstcard + " | "+"\nSecond Card ->"+ secondcard
+
+
+
+}
 
 /*
 //if else demonstration
