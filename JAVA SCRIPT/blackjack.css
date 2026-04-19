@@ -23,7 +23,7 @@ message-el {
 
 }
 
-button {
+.btn {
     background-color: rgb(226, 38, 38);
     color: rgb(239, 233, 233);
     border: none;
