@@ -35,7 +35,7 @@ console.log(message)
 document.getElementById("message-el").textContent = message 
 
 document.getElementById("sum-el").textContent = "Sum: " + sum
-document.querySelector("#cards-el").textContent = "Cards:  First Card ->" + firstcard + " | "+"\nSecond Card ->"+ secondcard
+document.querySelector("#cards-el").textContent = "Cards:  First Card ->" + firstcard + " | "+"Second Card ->"+ secondcard
 
  }
 
@@ -53,7 +53,7 @@ function newCard() {
         let card = Math.floor(Math.random() * 15) + 1
         sum += card
         document.getElementById("sum-el").textContent = "Sum: " + sum
-        document.querySelector("#cards-el").textContent += " | " + "\nNew Card ->" + card
+        document.querySelector("#cards-el").textContent += " | " + "New Card ->" + card
         renderGame();
    }
 
