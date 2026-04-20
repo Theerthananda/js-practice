@@ -9,17 +9,23 @@
 <body>
     <div class="game-box">
         <h1>BlackJack</h1>
-        <p id="message-el">Do you want to draw a new card?</p>
-        <p id="cards-el">Cards :</p>
-        <p id="sum-el">Sum :</p>
 
-        <button class="btn" onclick="startGame()">START GAME</button>
-        <button class="btn" onclick="newCard()">NEW CARD</button>
-        <button class="btn" onclick="resetGame()">RESET GAME</button>
-        <button class="btn" onclick="quitGame()">QUIT GAME</button>
-        <button class="btn" onclick="location.reload()" style="display: none;">PLAY AGAIN</button>
+        <p id="attempts-el">Total Attempts: 5</p>
+        <p id="message-el">Do you want to draw a new card?</p>
+        <p id="cards-el">Cards:</p>
+        <p id="sum-el">Sum:</p>
+
+        
+        <button id="start-btn" class="btn" onclick="startGame()">START GAME</button>
+        <button id="newcard-btn" class="btn" onclick="newCard()">NEW CARD</button>
+        <button id="reset-btn" class="btn" onclick="resetGame()">RESET GAME</button>
+        <button id="quit-btn" class="btn" onclick="quitGame()">QUIT GAME</button>
+        <button id="playagain-btn" class="btn" onclick="location.reload()" style="display: none;">PLAY AGAIN</button>
 
         <p id="score-el">Game Score: 0</p>
+        <p id="attemptWarn-el" style="display: none; color: red;">
+            You have exceeded the maximum number of attempts.
+        </p>
     </div>
 
     <script src="BlackJack.js"></script>
