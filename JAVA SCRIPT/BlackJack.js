@@ -26,7 +26,17 @@ const finalBtn = document.getElementsByClassName("btn")[4];
 
 
 function getRandomCard() {
-    return Math.floor(Math.random() * 13) + 1;
+    let card = Math.floor(Math.random() * 13) + 1;
+
+    if (card > 10) {
+        return 10;
+    }
+    else if (card === 1) {
+        return 11;
+    }
+    else {
+        return card;
+    }
 }
 
 
@@ -36,7 +46,6 @@ function startGame() {
         quitGame();
         return;
     }
-
     totalAttempts--;
     attemptsEl.textContent = "Total Attempts available: " + totalAttempts;
 
@@ -100,7 +109,7 @@ function renderGame() {
     }
 
     messageEl.textContent = message;
-    scoreEl.textContent = "Game Score: " + gameScore;
+    scoreEl.textContent = "Your Wins: $" + gameScore;
 }
 
 
@@ -133,7 +142,7 @@ function quitGame() {
     resetBtn.style.display = "none";
     quitBtn.style.display = "none";
 
-    scoreEl.textContent = "Game Score: " + gameScore;
+    scoreEl.textContent = "Your Wins: $" + gameScore;
     gameScore = 0;
 
     finalBtn.style.display = "";
