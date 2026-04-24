@@ -1,71 +1,67 @@
-let a = [5, 10, 15, 20];
+const mixedArray=[1,true,"JAVAsCript"]
 
-let AddToHTml = document.getElementById("Array");
+const salad = ['🍎','🍏','🍐','🍒','🍓','🫐','🫒','🍆']  
 
-AddToHTml.textContent=a.join(" - ");
+console.log(salad);
 
-a.splice(2, 0, 12);
+const salad2=new Array('🍎','🍏','🍐','🍒','🍓','🫐','🫒','🍆');
 
-AddToHTml.textContent=a.join(" - ");
+console.log(salad2);
 
-a.splice(4, 1);
+console.log(salad===salad2);
 
-AddToHTml.textContent=a.join(" - ");
+const a=new Array(2);
+console.log(a);
 
-a.unshift(0);
+console.log(salad[1]);
+console.log(salad[2]);
+console.log(salad[3]);
+console.log(salad[4]);
 
-AddToHTml.textContent=a.join(" - ");
-a.push(25);
+ for(let i=0;i<salad.length;i++) {
+    console.log(`Element at index ${i} ${salad[i]}`);
+ }
 
-AddToHTml.textContent=a.join(" - ");    
-
-a.push(30);
-
-AddToHTml.textContent=a.join(" - ");
-
-a.pop();
-
-AddToHTml.textContent=a.join(" - ");
-
-let stringArray = ["Hello", "World", "JavaScript"];
-
-AddToHTml.textContent=stringArray.join(" ");
-
-let res=""
-for (let i = 0; i < stringArray.length; i++) {
-    res+=stringArray[i]+" ";
-}
-AddToHTml.textContent=res
-
-let arr=["hello",66,"world",true];
-AddToHTml.textContent=arr.join(" , ");
+/*const prompt = require("prompt-sync")();
+let name = prompt("Enter your name: ");
+console.log("Hello " + name);*/
 
 
+//push();
+
+const ret=salad.push('🍔');
+console.log(ret);
+console.log(salad);
+
+//unshift();
+
+const ret1=salad.unshift('💐');
+console.log(ret1);
+console.log(salad);
+
+//pop();
+const popRet=salad.pop();
+console.log(popRet);
+console.log(salad);
+
+//shift()
+const shiftRet=salad.shift();
+console.log(shiftRet);
+console.log(salad);
+
+//slice()-copy
+
+const saladCopy=salad.slice();
+console.log(saladCopy);
 
 
-arr.pop();
-AddToHTml.textContent=arr.join(" , ");
+//isArray();
+const check1=Array.isArray(['🍎','🍏','🍐','🍒','🍓','🫐','🫒','🍆'])
+console.log(check1);
+const check2=Array.isArray('🍎');
+console.log(check2);
+const check3=Array.isArray({"Name":"Theerthananda"});
+console.log(check3);
+const check4=Array.isArray([]);
+console.log(check4);
 
-arr.unshift("welcome");
-AddToHTml.textContent=arr.join(" , ");
-
-arr.shift();
-AddToHTml.textContent=arr.join(" , ");
-
-
-
-arr.reverse();
-AddToHTml.textContent=arr.join(" , ");
-
-arr.sort();
-AddToHTml.textContent=arr.join(" , ");
-
-let numArray=[5,3,8,1,4];
-numArray.sort(function(a, b){return b-a});
-AddToHTml.textContent=numArray.join(" , ");
-
-numArray.sort();
-AddToHTml.textContent=numArray.join(" , ");
-
-numArray.sort(function(a, b){return b-a});
-AddToHTml.textContent=numArray.join(" , ");
