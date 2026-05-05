@@ -54,7 +54,7 @@ console.log(names+"\n");
 - Supports negative indexing
 */
 
-const junkFood=['fizza','Burger','popCorn'];
+const junkFood=['pizza','Burger','popCorn'];
 
 console.log(junkFood.at(0));   // first
 console.log(junkFood.at(-1));  // last
