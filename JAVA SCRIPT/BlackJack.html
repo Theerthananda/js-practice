@@ -1,32 +1,102 @@
 <!DOCTYPE html>
+<!-- ===========================================
+     📄 HTML5 Document Declaration
+=========================================== -->
+
 <html lang="en">
+
 <head>
+    <!-- =======================================
+         🔹 STYLESHEET LINK
+    ======================================== -->
     <link rel="stylesheet" href="blackjack.css">
+
+    <!-- =======================================
+         🔹 META CONFIGURATION
+    ======================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
     <title>BlackJack</title>
 </head> 
+
 <body>
+
+    <!-- =======================================
+         🔹 MAIN GAME CONTAINER
+    ======================================== -->
     <div class="game-box">
+
+        <!-- Game Title -->
         <h1>BlackJack</h1>
 
+        <!-- ===================================
+             🔹 GAME STATUS DISPLAY
+        ==================================== -->
         <p id="attempts-el">Total Attempts: 5</p>
         <p id="message-el">Do you want to draw a new card?</p>
         <p id="cards-el">Cards:</p>
         <p id="sum-el">Sum:</p>
 
         
+        <!-- ===================================
+             🔹 GAME CONTROL BUTTONS
+        ==================================== -->
         <button id="start-btn" class="btn" onclick="startGame()">START GAME</button>
         <button id="newcard-btn" class="btn" onclick="newCard()">NEW CARD</button>
         <button id="reset-btn" class="btn" onclick="resetGame()">RESET GAME</button>
         <button id="quit-btn" class="btn" onclick="quitGame()">QUIT GAME</button>
-        <button id="playagain-btn" class="btn" onclick="location.reload()" style="display: none;">PLAY AGAIN</button>
 
+        <!-- Hidden button (shown after game ends) -->
+        <button id="playagain-btn" class="btn" onclick="location.reload()" style="display: none;">
+            PLAY AGAIN
+        </button>
+
+        <!-- ===================================
+             🔹 SCORE & WARNINGS
+        ==================================== -->
         <p id="score-el">Your Wins: $0</p>
+
         <p id="attemptWarn-el" style="display: none; color: red;">
-            You have exceeded the maximum number of attempts.</p>
+            You have exceeded the maximum number of attempts.
+        </p>
     </div>
 
+    <!-- =======================================
+         🔹 JAVASCRIPT FILE LINK
+    ======================================== -->
     <script src="BlackJack.js"></script>
+
 </body>
 </html>
+
+
+<!--
+===========================================
+🧠 NOTES
+===========================================
+
+✔ Displays Blackjack game UI
+✔ Buttons trigger JS functions:
+   - startGame()
+   - newCard()
+   - resetGame()
+   - quitGame()
+
+✔ Dynamic elements:
+   - attempts-el → remaining attempts
+   - message-el → game status
+   - cards-el → cards drawn
+   - sum-el → total sum
+   - score-el → score tracking
+
+✔ playagain-btn:
+   - Hidden initially
+   - Reloads page to restart game
+
+✔ attemptWarn-el:
+   - Shows warning when attempts exceeded
+
+===========================================
+-->
