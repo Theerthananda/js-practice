@@ -1,29 +1,99 @@
 <!DOCTYPE html>
+<!-- ===========================================
+     📄 HTML5 Document Declaration
+=========================================== -->
+
 <html lang="en">
+
 <head>
+    <!-- =======================================
+         🔹 META CONFIGURATION
+    ======================================== -->
     <meta charset="UTF-8">
+
+    <!-- Makes page responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
     <title>People Counting</title>
 </head>
+
 <body>
+
+    <!-- =======================================
+         🔹 MAIN UI SECTION
+    ======================================== -->
     <center>
-       <font color="blue">
-    <h1>People Counting</h1>
-    <p id="peopleCount">0</p>
-    
 
-    <button onclick="incrementCount()" style="background-color: green; color: white;">Enter</button>
-    <button onclick="decrementCount()" style="background-color: red; color: white;">Exit</button>
-    <button onclick="save()" style="background-color: blue; color: white;">Save Count</button>
+        <!-- Title -->
+        <font color="blue">
+            <h1>People Counting</h1>
+        </font>
 
-    <p id="save-ele">Previous Count:  </p>
+        <!-- Current Count Display -->
+        <p id="peopleCount">0</p>
+
+
+        <!-- ===================================
+             🔹 BUTTON CONTROLS
+        ==================================== -->
+
+        <!-- Increment (Enter) -->
+        <button onclick="incrementCount()" 
+                style="background-color: green; color: white;">
+            Enter
+        </button>
+
+        <!-- Decrement (Exit) -->
+        <button onclick="decrementCount()" 
+                style="background-color: red; color: white;">
+            Exit
+        </button>
+
+        <!-- Save Count -->
+        <button onclick="save()" 
+                style="background-color: blue; color: white;">
+            Save Count
+        </button>
+
+
+        <!-- ===================================
+             🔹 SAVED DATA DISPLAY
+        ==================================== -->
+        <p id="save-ele">Previous Count: </p>
+
     </center>
 
+
+    <!-- =======================================
+         🔹 JAVASCRIPT FILE LINK
+    ======================================== -->
     <script src="SimplePeopleCountingApp.js"></script>
+
 </body>
 </html>
 
 
 <!--
-!DOCTYPE is the document type declaration for an HTML5 document
-and  <meta name="viewport" content="width=device-width, initial-scale=1.0"> is a meta tag that sets the viewport width and initial scale -->  
+===========================================
+🧠 NOTES
+===========================================
+
+✔ <!DOCTYPE html> → Defines HTML5 document
+✔ <meta charset="UTF-8"> → Supports all characters
+✔ <meta viewport> → Makes page responsive
+
+✔ Buttons use onclick to trigger JS functions:
+   - incrementCount()
+   - decrementCount()
+   - save()
+
+✔ IDs used for DOM manipulation:
+   - peopleCount → current count
+   - save-ele → saved history
+
+⚠ <center> and <font> are deprecated in modern HTML
+   → Use CSS instead (recommended)
+
+===========================================
+-->
