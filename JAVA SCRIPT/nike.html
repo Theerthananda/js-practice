@@ -1,21 +1,81 @@
 <!DOCTYPE html>
+<!-- ===========================================
+     📄 HTML5 Document Declaration
+=========================================== -->
+
 <html lang="en">
+
 <head>
+    <!-- =======================================
+         🔹 META CONFIGURATION
+    ======================================== -->
     <meta charset="UTF-8">
+
+    <!-- Responsive layout -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nike shoe</title>
+
+    <!-- Page Title -->
+    <title>Nike Shoe</title>
 </head>
+
 <body>
-    <center><h1>Nike Shoe</h1>
-   <img src="nike.webp" alt="nike shoe" width="400px" height="400px">
-    <h2>Nike Shoe</h2> 
-    
-    <button onclick="purchase()"  style="height: 50px; width: 100px; color:black; background-color: cadetblue;">Buy Now ₹500/-</button>
-    
-    <font color="red"><h3>Note: Only 1 shoe is available</h3>
-    <p id="err"></p>
-    </font>
+
+    <!-- =======================================
+         🔹 MAIN PRODUCT SECTION
+    ======================================== -->
+    <center>
+
+        <!-- Product Title -->
+        <h1>Nike Shoe</h1>
+
+        <!-- Product Image -->
+        <img src="nike.webp" alt="nike shoe" width="400px" height="400px">
+
+        <!-- Product Name -->
+        <h2>Nike Shoe</h2> 
+
+        <!-- ===================================
+             🔹 BUY BUTTON
+        ==================================== -->
+        <button onclick="purchase()"  
+                style="height: 50px; width: 100px; color:black; background-color: cadetblue;">
+            Buy Now ₹500/-
+        </button>
+
+        <!-- ===================================
+             🔹 STOCK MESSAGE & ERROR DISPLAY
+        ==================================== -->
+        <font color="red">
+            <h3>Note: Only 1 shoe is available</h3>
+
+            <!-- Error / status message -->
+            <p id="err"></p>
+        </font>
+
     </center>
+
+    <!-- =======================================
+         🔹 JAVASCRIPT FILE LINK
+    ======================================== -->
     <script src="nike.js"></script>
+
 </body>
 </html>
+
+
+<!--
+===========================================
+🧠 NOTES
+===========================================
+
+✔ Displays product (Nike shoe) with image
+✔ "Buy Now" button triggers purchase() function
+✔ Only 1 item available (stock constraint)
+
+✔ id="err" → used to show messages (success/error)
+
+⚠ <center> and <font> are deprecated
+   → Use CSS for modern development
+
+===========================================
+-->

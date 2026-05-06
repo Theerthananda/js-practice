@@ -1,16 +1,65 @@
-let count = 0;
+/*
+===========================================
+👥 People Counter App (JavaScript)
+===========================================
+
+Features:
+✔ Increment / decrement counter
+✔ Save previous counts
+✔ Reset counter after save
+✔ DOM updates using textContent
+✔ Notes on textContent vs innerText vs innerHTML
+
+===========================================
+*/
+
+
+/*
+===========================================
+🔹 STATE VARIABLES
+===========================================
+*/
+
+let count = 0; // current count
+
+
+/*
+===========================================
+🔹 DOM ELEMENT REFERENCES
+===========================================
+*/
 
 let peopleCountElement = document.getElementById("peopleCount");
 let saveElement = document.getElementById("save-ele");
+
+// Initial debug logs
 console.log(peopleCountElement.textContent);
 console.log(saveElement.textContent);
 
+
+/*
+===========================================
+🔹 INCREMENT FUNCTION
+===========================================
+
+- Increases count by 1
+- Updates UI
+*/
+
 function incrementCount() {
     count++;
-   // console.log(peopleCountElement.outerHTML);
-    // console.log(saveElement.outerHTML);   
     peopleCountElement.textContent = count;
 }
+
+
+/*
+===========================================
+🔹 DECREMENT FUNCTION
+===========================================
+
+- Decreases count only if > 0
+- Prevents negative values
+*/
 
 function decrementCount() {
     if (count > 0) {
@@ -19,18 +68,70 @@ function decrementCount() {
     }
 }
 
+
+/*
+===========================================
+🔹 SAVE FUNCTION
+===========================================
+
+- Saves current count history
+- Appends to previous values
+- Resets count to 0
+*/
+
 function save() {
     let saved = count + " - ";
     saveElement.textContent += saved;
 
+    // Reset counter
     count = 0;
-    peopleCountElement.textContent = count   //here used textContent instead of innerText because it is faster than innerText and it does not trigger a reflow of the page, which can improve performance.
+    peopleCountElement.textContent = count;
+
+    /*
+    NOTE:
+    Using textContent instead of innerText because:
+    ✔ Faster
+    ✔ Does NOT trigger reflow (better performance)
+    */
 }
 
 
-//diff between textContent and innerText and innerHTML and outerHTML and outerText
-// textContent: It returns the text content of an element and all its descendants. It does not include any HTML tags or formatting. It is used to get or set the text content of an element.    
-// innerText: It returns the visible text content of an element, including any formatting and line breaks. It is used to get or set the visible text content of an element.
-// innerHTML: It returns the HTML content of an element, including any child elements and their attributes. It is used to get or set the HTML content of an element.
-// outerHTML: It returns the HTML content of an element, including the element itself and its attributes. It is used to get or set the entire HTML content of an element, including the element itself.
-// outerText: It is not a standard property in JavaScript. It may be a custom property defined in some libraries or frameworks, but it is not widely supported or recognized in standard JavaScript.    
+/*
+===========================================
+🔹 DOM TEXT PROPERTIES (IMPORTANT)
+===========================================
+
+textContent:
+✔ Gets/sets ALL text inside element
+✔ Ignores HTML tags
+✔ Faster (no layout calculation)
+
+innerText:
+✔ Gets ONLY visible text
+✔ Respects CSS (hidden elements ignored)
+✔ Slower (causes reflow)
+
+innerHTML:
+✔ Gets/sets HTML content (tags included)
+✔ Can insert HTML dynamically
+⚠ Risky if used with user input (XSS)
+
+outerHTML:
+✔ Includes the element itself + its HTML
+✔ Replaces entire element if set
+
+outerText:
+✔ Not standard
+✔ Not reliable across browsers
+
+===========================================
+🧠 FINAL SUMMARY
+===========================================
+
+✔ textContent → fastest & safest for text updates
+✔ innerText → visible text only (slower)
+✔ innerHTML → use only when HTML needed
+✔ Avoid unnecessary DOM reflows for performance
+
+===========================================
+*/
