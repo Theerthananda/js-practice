@@ -105,9 +105,7 @@ const ele = document.getElementsByTagName("li");
 console.log(ele instanceof Object);
 
 console.log(
-    "HTML collection as Array-Like:",
-    ele
-);
+    "HTML collection as Array-Like:",ele);
 
 
 /*
