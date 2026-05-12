@@ -1,6 +1,6 @@
 /*
 ===========================================
-📘 Array.from() vs Array.fromAsync()
+📘 Array.from(), Array.fromAsync() & Array.of()
 ===========================================
 
 Covers:
@@ -9,6 +9,8 @@ Covers:
 ✔ HTMLCollection conversion
 ✔ Promise handling
 ✔ Async array creation
+✔ Array.of()
+✔ Array constructor differences
 ===========================================
 */
 
@@ -36,9 +38,10 @@ const htmlele = Array.from(
 
 - Asynchronous version of Array.from()
 - Returns a Promise
-- Can handle:
-   ✔ Async iterables
-   ✔ Promises inside array-like objects
+
+Can handle:
+✔ Async iterables
+✔ Promises inside array-like objects
 */
 
 const htmlelePromise = Array.fromAsync(
@@ -91,6 +94,57 @@ console.log(ret);
 
 /*
 ===========================================
+🔹 ARRAY CONSTRUCTORS
+===========================================
+*/
+
+
+/*
+-------------------------------------------
+Array Constructor
+-------------------------------------------
+
+Creates array using constructor
+*/
+
+const a = new Array(1,2,3,4,5);
+
+
+/*
+-------------------------------------------
+Array Literal
+-------------------------------------------
+
+Most commonly used method
+*/
+
+const b = [6,7,8,9];
+
+
+/*
+-------------------------------------------
+Array.of()
+-------------------------------------------
+
+Creates array from arguments exactly as given
+
+Useful because:
+✔ Avoids constructor confusion
+✔ Handles single values safely
+*/
+
+const c = Array.of(
+   2,
+   true,
+   {Name:"Theerthananda"},
+   [1,2,3,4,5]
+);
+
+console.log(c);
+
+
+/*
+===========================================
 🧠 FINAL SUMMARY
 ===========================================
 
@@ -112,10 +166,20 @@ console.log(ret);
    - Array-like object
    - Can be converted to array
 
-✔ Async methods are useful when:
+✔ Array.of():
+   - Creates array from given values
+   - Safer than new Array()
+
+✔ Array creation methods:
+   - [] → array literal
+   - new Array() → constructor
+   - Array.of() → exact values
+   - Array.from() → convert iterable
+
+✔ Async methods are useful for:
    - Fetching async data
-   - Working with Promises
-   - Handling async iterables
+   - Handling Promises
+   - Working with async iterables
 
 ===========================================
 */
